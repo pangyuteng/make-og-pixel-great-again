@@ -1,0 +1,7 @@
+__pycache__
+client_secret.json
+token.pickle
+secret.json
+chromedriver-linux64
+*.csv
+*.deb
