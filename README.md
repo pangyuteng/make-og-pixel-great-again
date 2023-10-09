@@ -47,7 +47,7 @@ comment on selenium: had a hard time finding the right version and syntax to wor
 
 ```
 
-+ to save space, download then delete these photos, and reupload using below solution.
++ to save space, download then delete photos in space.csv where column "observation" == "This item takes up space.", and reupload using below solution.
 
     + *** do not use broswer "save as" when downloading image *** , you will not retain the metadata in the jpgs!
 
