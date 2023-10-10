@@ -53,7 +53,7 @@ comment on selenium: had a hard time finding the right version and syntax to wor
 
 ### for new photos, sync photos using your old OG Pixel.
 
-+ To take advantage of your old OG Pixel's unlimited photo storage functionality you can do a one way "sync" from new to old Pixel. *** i would only recommend the below solution to those who prefer running linux commands than using guis. ***  Those that are not comfortable using terminals, please head to https://www.reddit.com/r/GooglePixel/comments/njk5b3/og_pixel_unlimited_photos_storage_syncthing_guide for other solutions.
++ To take advantage of your old OG Pixel's unlimited photo storage functionality you can do a one way "sync" from new to old Pixel. *** i would only recommend the below solution to those who prefer running linux commands than using guis. For those that are terminal-inclined, please head over to https://www.reddit.com/r/GooglePixel/comments/njk5b3/og_pixel_unlimited_photos_storage_syncthing_guide for other GUI friendly solutions. *** 
 
     + for both phones:
         + install F-Droid
