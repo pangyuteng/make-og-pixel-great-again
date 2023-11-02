@@ -60,7 +60,6 @@ def main():
 
         df = pd.DataFrame(mylist)
         df.to_csv('all.csv',index=False)
-        df.creationTime = datetime.datetime.strptime(x,'%Y-%m-%dT%H:%M:%SZ')
 
         page_photos = service.mediaItems().list(
                             pageSize=99, pageToken=nextPageToken).execute()
