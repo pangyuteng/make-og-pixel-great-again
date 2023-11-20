@@ -25,7 +25,20 @@ python fetchall.py
 
 ### find photos that takes up space.
 
++ create a file `secret.json` containing your google credentials:
+
+    + sample json file content
+
+```
+{
+  "email":"asdf@ok.com",
+  "password":"verysecret",
+  "backupemail":"bak@aol.com"
+}
+```
+
 + determine if photo takes up space and save to `space.csv` with below:
+
 
 ```
 python crawlall.py
