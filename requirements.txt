@@ -3,5 +3,5 @@ google==3.0.0
 google_auth_oauthlib==1.1.0
 google_auth_httplib2==0.1.1
 pandas==2.1.1
-selenium==4.8.2
-undetected_chromedriver==3.1.5.post4
+selenium==4.11.2
+undetected_chromedriver==3.5.4
