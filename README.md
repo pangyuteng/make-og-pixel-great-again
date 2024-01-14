@@ -54,7 +54,7 @@ https://www.scrapingbee.com/blog/selenium-python
 
 https://selenium-python.readthedocs.io/locating-elements.html
 
-wget http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.337_amd64.deb
+wget https://web.archive.org/web/20230716095211/https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.198-1_amd64.deb 
 
 comment on selenium: had a hard time finding the right version and syntax to work - there are various tweaks online to make Google login work, and they will eventually not work, given Google actively updating to prevent automated logins and routing devs to their API - which at the time did not contain what i'm looking - the metadata per photo item does not show you if each image takes up google storage or not.
 
