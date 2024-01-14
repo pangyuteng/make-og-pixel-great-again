@@ -11,6 +11,7 @@ email,password,backup_email = secret["email"],secret["password"],secret["backupe
 
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
+from pathlib import Path
 
 message = f"Get your phone ready to confirm login (via google 2 step verification, gotta have this enabled)! Careful to not mess this up or your account may get locked for a while!!!"
 
@@ -41,10 +42,21 @@ df['tstamp']=df.creationTime.apply(
     lambda x: datetime.datetime.strptime(x,'%Y-%m-%dT%H:%M:%SZ')
 )
 print(df.shape)
-df = df[df.tstamp>datetime.datetime(2021,5,30,0,0,0)].reset_index()
+
+outfile = "space2.csv"
+appnd = Path(outfile).is_file()
+
+if appnd:
+    rd = pd.read_csv(outfile)
+    res = datetime.datetime.strptime(rd.iloc[-1].creationTime,'%Y-%m-%dT%H:%M:%SZ')
+else:
+    res = datetime.datetime.now()
+
+df = df[df.tstamp<res].reset_index()
 print(df.shape)
 
-mylist = []
+#mylist = []
+firstrow = True
 for n,row in df.iterrows():
 	try:
 		driver.get(row.productUrl)
@@ -61,11 +73,14 @@ for n,row in df.iterrows():
 		else:
 			mytext = "This item takes up space."
 		print(mytext)
+		mylist = []
+		headr = not(appnd) and firstrow
 		myitem = dict(row)
 		myitem['observation']=mytext
 		mylist.append(myitem)
-		newdf = pd.DataFrame(mylist)
-		newdf.to_csv("space.csv",index=False)
+		newdf = pd.DataFrame([mylist[-1]])
+		newdf.to_csv(outfile,index=False,header=headr,mode='a')
+		firstrow = False
 	except:
 		traceback.print_exc()
 		time.sleep(2)
