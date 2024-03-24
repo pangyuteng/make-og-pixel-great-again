@@ -1,4 +1,20 @@
 
+
+```
+** disclaimer **
+
+this is just a code repo that i use to archive scripts.
+this is not a software package.
+run and edit the scripts at your own risk!
+
+for those that are terminal-inclined or do not know how to read and edit code, please think twice before you venture further down ...
+
+lastly, all the best to the tinkerers and hackers. keep on building.
+
+```
+
+##
+
 ## Locate photos that takes up space in Google Photos, then upload using your OG Pixel.
 
 
